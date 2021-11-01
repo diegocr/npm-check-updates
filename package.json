@@ -96,7 +96,7 @@
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jsdoc": "^36.0.8",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-promise": "^5.1.1",
     "husky": "^7.0.2",
     "lockfile-lint": "^4.6.2",
     "markdownlint-cli": "^0.28.1",
