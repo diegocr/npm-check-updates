@@ -182,7 +182,9 @@ export async function toDependencyTable({
               : '*unknown*'
             : ''
           const toColorized = colorizeDiff(getVersion(from), to)
-          const repoUrl = format?.includes('repo') ? (await getRepoUrl(dep)) || '' : ''
+          const repoUrl =
+            (format?.includes('repo') && (await getRepoUrl(dep))) ||
+            `https://my.diffend.io/npm/${dep}/${from.replace(/^\W+/, '')}/${to.replace(/^\W+/, '')}`
           const publishTime = format?.includes('time') && time?.[dep] ? time[dep] : ''
           return [dep, from, '→', toColorized, ownerChanged, ...[repoUrl, publishTime].filter(x => x)]
         }),
